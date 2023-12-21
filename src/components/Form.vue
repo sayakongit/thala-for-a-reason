@@ -14,7 +14,7 @@
   >
     Click to see magic!🎉
   </button>
-  <p v-else class="text-opacity-80 text-xs">
+  <p v-else class="text-gray-400 text-xs">
     Letter count: {{ getLetterCount() }}/7
   </p>
 </template>

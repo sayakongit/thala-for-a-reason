@@ -7,12 +7,14 @@
     <Form v-if="check === 7" />
     <Thala v-else />
   </div>
+  <Footer />
 </template>
 
 <script setup>
 import Header from "./components/Header.vue";
 import Form from "./components/Form.vue";
 import Thala from "./components/Thala.vue";
+import Footer from "./components/Footer.vue";
 import { ref, provide } from "vue";
 
 const check = ref(7);
