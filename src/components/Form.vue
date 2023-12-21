@@ -31,5 +31,6 @@ const sharedData = inject("sharedData");
 
 const updateParentData = () => {
   sharedData.value = total.value;
+  localStorage.setItem("word", inputText.value);
 };
 </script>

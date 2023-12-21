@@ -1,5 +1,6 @@
 <template>
   <img src="../assets/thala.gif" alt="" />
+  <p>{{ getWord() }} = 7</p>
   <p class="text-2xl text-center">Yayy! Thala For a Reason 😤</p>
   <audio ref="audioPlayer">
     <source :src="songUrl" type="audio/mpeg" />
@@ -16,12 +17,16 @@
 import { onMounted, ref } from "vue";
 import songUrl from "../assets/boleJoKoyal.mp3";
 const audioPlayer = ref(null);
+const word = ref("");
+
+const getWord = () => {
+  let arr = word.value.split("");
+  arr = arr.join("+");
+  return arr;
+};
 
 onMounted(() => {
-  console.log("myheader mounted");
-
-  console.log(audioPlayer.value);
-
+  word.value = localStorage.getItem("word");
   // Play the song
   audioPlayer.value?.play();
 });
